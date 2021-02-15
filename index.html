@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="headingsDiv">
+        <h1 id="heading1" class="headings">Heading 1</h1>
+        <h2 id="heading2" class="headings">Heading 2</h2>
+        <h3 id="heading3" class="headings">Heading 3</h3>
+        <h4 id="heading4" class="headings">Heading 4</h4>
+        <h5 id="heading5" class="headings">Heading 5</h5>
+        <button id="showLessButton" onclick="showLess()">Show Less</button>
+        <button id="showMoreButton" onclick="showMore()" style="display: none;">Show More</button>
+    </div>
+
+    <div>
+        <label for="classSwap">This button will add or remove a class.</label>
+        <button onclick="classSwap()" name="classSwap">Click Me</button><br><br>
+        <label for="showHideButton">This button will show or hide the headingsDiv</label>
+        <button onclick="showHideDiv()" name="showHideButton">Click Me</button><br><br>
+    </div>
+
+    <div>
+        <label for="eventHandlerButton">Test</label>
+        <button onclick="" name="eventHandlerButton" id="eventHandlerButton">I Don't Have an Event</button><br><br>
+        <label for="eventHandlerSwap">Click Me To Give The Button Above An Event</label>
+        <button onclick="eventListenerAdd()" name="eventHandlerSwap" id="eventHandlerSwap">Click Me</button><br><br>
+    </div>
+
+    <div>
+        <p id="sizeTestParagraph">Use the Up and Down Arrow Keys to Increase My Size</p><br><br>
+    </div>
+    
+    <div>
+        <p id="mouseOverText" onmouseover="mouseOverColor()">Mouse Over Me To Change My Background</p>
+    </div>
+
+    <div onclick='alert("I am Div 1" + " This Event Was Triggered By a " + event.target.nodeName)'> Div 1
+        <p onclick="alert('I am P 1')">I am a P in Div 1</p>
+        <div onclick="alert('I am Div 2')"> Div 2
+            <p onclick="event.stopPropagation()">I am a P in Div 2 That Stop Bubbling</p>
+        </div>
+    </div>
+
+    <div>
+        <p id='alterSizeColorText' onclick='alterTextSizeAndColor()'>Click Me to Give Me a Size and Color</p>
+    </div>
+
+    <div>
+        <h4 id='headingFade'>Click The Image Below To Fade It</h1>
+        <img src="babyYoda.jpg" alt="babyYoda" id='babyYoda' width="200" height="100" onclick='fadeImg()'>
+    </div>
+
+    <div>
+        <label for="audioButton">Click This Button to Start or Stop the Song</label>
+        <button id="audioButton" onclick="audioSwap()">Play</button>
+        <audio id="my_audio" src="stinky.mp3" loop="loop"></audio>
+    </div>
+
+    <div>
+        <p onclick='nestedPropertyDisplay()'>Click Me For Nested Objects Properties</p>
+    </div>
+
+    <div id='formDiv'>
+        <form>
+            <label for="colors">Select A Color:</label>
+            <select id="colors" name="colors">
+                <option value="blue">Blue</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+            </select>
+            <label for="textInput">Enter Some Text</label>
+            <input type="text" name="textInput" id="textInput"><br>
+            <input type="checkbox" id="animal1" name="animal1" value="Bear">
+            <label for="animal1">I like bears</label><br>
+            <input type="checkbox" id="animal2" name="animal2" value="Dog">
+            <label for="animal2"> I like dogs</label><br>
+            <input type="checkbox" id="animal3" name="animal3" value="Penguins">
+            <label for="animal3"> I like penguins</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br>
+            <p id='answers'>Your Answers Will Go Here When Submitted</p>
+        </form>
+        <button id="submitButton" onclick="validateForm()">Submit/Display</button>
+    </div>
+
+    <div id='domObjectDiv'>
+        <p>Adding a DOM Object</p>
+        <button onclick="removeObject()">Remove Object</button><br>
+        <button onclick="addObject()">Add Object</button>
+        <button onclick="positionObject()">Change Object Position</button>
+        <object id="domObject" width="100%" height="100px" data="snippet.html"></object>
+
+    </div>
+    
+    <div>
+        <p>List One</p>
+        <ul id="listOne">
+            <li>One</li>
+            <li>Two</li>
+        </ul>
+        <p>List Two</p>
+        <ul id="listTwo">
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+        <button id="newListItemButton" onclick="newListItem()">Add New Item To List</button><br><br>
+        <button id="moveListButton" onclick="moveList()">Move List</button>
+    </div>
+
+    <div>
+        <button id='scrollButton' onclick="scrollToTop()">Scroll To Top</button>
+    </div>
+</body>
+<script src="first.js"></script>
+</html>
